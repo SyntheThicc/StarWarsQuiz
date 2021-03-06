@@ -1,0 +1,566 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+@media (max-height: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 750px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: #383737;
+  color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url(images/HD.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.wrapper h1 {
+  font-size: 7rem;
+  font-weight: bold;
+  position: absolute;
+  top: 8rem;
+}
+
+@media (max-width: 450px) {
+  .wrapper h1 {
+    font-size: 5rem;
+  }
+}
+
+.wrapper .start__box {
+  height: 50rem;
+  margin-top: 5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .start__box h2 {
+  font-size: 5rem;
+}
+
+@media (max-width: 450px) {
+  .wrapper .start__box h2 {
+    font-size: 4rem;
+  }
+}
+
+.wrapper .start__box .btn__container {
+  width: 100%;
+  max-width: 30rem;
+  height: 20rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .start__box .btn__container .btn {
+  background: transparent;
+  border: 0.2rem solid yellow;
+  color: yellow;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.wrapper .start__box .btn__container .btn:focus {
+  border: none;
+  color: #3f3f3f;
+  background: -webkit-gradient(linear, left bottom, left top, from(var(--btn-color)), color-stop(30%, white), color-stop(70%, white), to(var(--btn-color)));
+  background: linear-gradient(0deg, var(--btn-color) 0%, white 30%, white 70%, var(--btn-color) 100%);
+  -webkit-box-shadow: 0px 10px 13px -7px var(--btn-color), 0px 0px 30px 5px var(--btn-color);
+          box-shadow: 0px 10px 13px -7px var(--btn-color), 0px 0px 30px 5px var(--btn-color);
+}
+
+.wrapper .start__box .btn__start {
+  font-size: 2.2rem;
+  width: 30rem;
+  padding: 1.5rem 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(blue), color-stop(30%, white), color-stop(70%, white), to(blue));
+  background: linear-gradient(0deg, blue 0%, white 30%, white 70%, blue 100%);
+  -webkit-box-shadow: 0px 10px 13px -7px blue, 0px 0px 30px 10px blue;
+          box-shadow: 0px 10px 13px -7px blue, 0px 0px 30px 10px blue;
+}
+
+.wrapper .game__box {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+}
+
+.wrapper .game__box .img__container {
+  overflow: hidden;
+  height: 60rem;
+  width: 100%;
+  max-width: 45rem;
+  border: yellow 0.5rem solid;
+  border-radius: 1rem;
+  margin: -5rem 0 4rem;
+}
+
+.wrapper .game__box .img__container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: blur(1rem);
+          filter: blur(1rem);
+}
+
+.wrapper .game__box form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 11rem;
+}
+
+.wrapper .game__box form input[type='text'] {
+  background: transparent;
+  outline: none;
+  border: 0.1rem yellow solid;
+  border-radius: 1rem;
+  height: 4rem;
+  color: yellow;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.wrapper .game__box form .btn {
+  font-size: 1.5rem;
+  width: 20rem;
+  padding: 1rem 0;
+}
+
+.wrapper .game__box .fade-in {
+  -webkit-animation: fade__in 1s;
+          animation: fade__in 1s;
+}
+
+.wrapper .game__box .unblur img {
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-filter: blur(0) !important;
+          filter: blur(0) !important;
+}
+
+.wrapper .ending__credits {
+  max-width: 90%;
+  height: 40rem;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  bottom: -60rem;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  -webkit-transition: 7s linear;
+  transition: 7s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .ending__credits h3 {
+  width: 100%;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  line-height: 8rem;
+}
+
+@media (max-width: 450px) {
+  .wrapper .ending__credits h3 {
+    font-size: 3rem;
+    line-height: 5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.wrapper .ending__credits .btn__retry {
+  display: none;
+  -webkit-animation-name: fade__in;
+          animation-name: fade__in;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+.lightsaber {
+  width: 90%;
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .lightsaber {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    width: 120%;
+  }
+}
+
+.lightsaber img {
+  width: 20%;
+  z-index: 5;
+  position: relative;
+  left: 0;
+}
+
+.lightsaber::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 65%;
+  background: var(--blade-color);
+  z-index: 10;
+  top: 18%;
+  left: 18.5%;
+  z-index: 0;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.lightsaber::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 33%;
+  background: white;
+  z-index: 1;
+  top: 30%;
+  left: 18.5%;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.message__display {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2.5rem;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 450px) {
+  .message__display {
+    font-size: 2rem;
+    padding: 0 4rem;
+  }
+}
+
+.correct {
+  color: #ffffff;
+  background: transparent;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18, 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+}
+
+.wrong {
+  color: #ffffff;
+  background: transparent;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 55px red, 0 0 75px red;
+}
+
+.saber__ignite .lightsaber::before {
+  width: 75%;
+  -webkit-animation: outerGlow 1s infinite;
+          animation: outerGlow 1s infinite;
+}
+
+.saber__ignite .lightsaber::after {
+  width: 74.5%;
+  -webkit-animation: innerGlow 1s infinite;
+          animation: innerGlow 1s infinite;
+}
+
+.roll__credits .ending__credits {
+  bottom: 50%;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  max-width: 60rem;
+  height: 100%;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-size: 2rem;
+  width: 25rem;
+  border-radius: 3rem;
+  color: #464646;
+  border: none;
+  padding: 0.5rem 0;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(blue), color-stop(30%, white), color-stop(70%, white), to(blue));
+  background: linear-gradient(0deg, blue 0%, white 30%, white 70%, blue 100%);
+  -webkit-box-shadow: 0px 10px 13px -7px blue, 0px 0px 23px 5px blue;
+          box-shadow: 0px 10px 13px -7px blue, 0px 0px 23px 5px blue;
+}
+
+.hide__btns h1 {
+  display: none;
+}
+
+.hide__btns .start__box {
+  display: none;
+}
+
+.show__game .game__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@-webkit-keyframes outerGlow {
+  0% {
+    -webkit-box-shadow: 0px 10px 13px -7px var(--blade-color), 15px 0px 30px 8px var(--blade-color);
+            box-shadow: 0px 10px 13px -7px var(--blade-color), 15px 0px 30px 8px var(--blade-color);
+  }
+  50% {
+    -webkit-box-shadow: 0px 10px 13px -7px var(--blade-color), 15px 0px 55px 14px var(--blade-color);
+            box-shadow: 0px 10px 13px -7px var(--blade-color), 15px 0px 55px 14px var(--blade-color);
+  }
+  100% {
+    -webkit-box-shadow: 0px 10px 13px -7px var(--blade-color), 15px 0px 30px 7px var(--blade-color);
+            box-shadow: 0px 10px 13px -7px var(--blade-color), 15px 0px 30px 7px var(--blade-color);
+  }
+}
+
+@keyframes outerGlow {
+  0% {
+    -webkit-box-shadow: 0px 10px 13px -7px var(--blade-color), 15px 0px 30px 8px var(--blade-color);
+            box-shadow: 0px 10px 13px -7px var(--blade-color), 15px 0px 30px 8px var(--blade-color);
+  }
+  50% {
+    -webkit-box-shadow: 0px 10px 13px -7px var(--blade-color), 15px 0px 55px 14px var(--blade-color);
+            box-shadow: 0px 10px 13px -7px var(--blade-color), 15px 0px 55px 14px var(--blade-color);
+  }
+  100% {
+    -webkit-box-shadow: 0px 10px 13px -7px var(--blade-color), 15px 0px 30px 7px var(--blade-color);
+            box-shadow: 0px 10px 13px -7px var(--blade-color), 15px 0px 30px 7px var(--blade-color);
+  }
+}
+
+@-webkit-keyframes innerGlow {
+  0% {
+    -webkit-box-shadow: 4px 0px 6px 2px rgba(255, 255, 255, 0.8);
+            box-shadow: 4px 0px 6px 2px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    -webkit-box-shadow: 4px 0px 8px 4px rgba(255, 255, 255, 0.8);
+            box-shadow: 4px 0px 8px 4px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    -webkit-box-shadow: 4px 0px 6px 2px rgba(255, 255, 255, 0.8);
+            box-shadow: 4px 0px 6px 2px rgba(255, 255, 255, 0.8);
+  }
+}
+
+@keyframes innerGlow {
+  0% {
+    -webkit-box-shadow: 4px 0px 6px 2px rgba(255, 255, 255, 0.8);
+            box-shadow: 4px 0px 6px 2px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    -webkit-box-shadow: 4px 0px 8px 4px rgba(255, 255, 255, 0.8);
+            box-shadow: 4px 0px 8px 4px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    -webkit-box-shadow: 4px 0px 6px 2px rgba(255, 255, 255, 0.8);
+            box-shadow: 4px 0px 6px 2px rgba(255, 255, 255, 0.8);
+  }
+}
+
+@-webkit-keyframes fade__in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fade__in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes text__crawl {
+  0% {
+    bottom: -60rem;
+  }
+  100% {
+    bottom: 50%;
+  }
+}
+
+@keyframes text__crawl {
+  0% {
+    bottom: -60rem;
+  }
+  100% {
+    bottom: 50%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

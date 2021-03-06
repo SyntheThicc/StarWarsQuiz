@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>STAR WARS QUIZ</h1>
+      <div class="start__box box">
+        <h2>Select Difficulty</h2>
+        <div class="btn__container">
+          <button
+            class="difficulty__btn btn"
+            data-difficulty="3"
+            data-color="green"
+          >
+            easy
+          </button>
+          <button
+            class="difficulty__btn btn"
+            data-difficulty="2"
+            data-color="gold"
+          >
+            medium
+          </button>
+          <button
+            class="difficulty__btn btn"
+            data-difficulty="hard"
+            data-color="red"
+          >
+            hard
+          </button>
+        </div>
+        <button class="btn__start btn">START GAME</button>
+      </div>
+      <div class="game__box box">
+        <div class="img__container fade-in">
+          <img src="" alt="" />
+        </div>
+        <form>
+          <input type="text" />
+          <input type="submit" class="btn submit__btn" value="Submit" />
+        </form>
+      </div>
+      <!-- LIGHTSABER LOADER -->
+      <div class="lightsaber">
+        <img src="images/pngkey.com-lightsaber-hilt-png-1541959.png" alt="" />
+      </div>
+      <audio class="ignite__sound" src="sounds/ignite.mp3"></audio>
+      <audio class="credits__sound" src="sounds/credits.mp3"></audio>
+      <!-- LIGHTSABER LOADER -->
+      <!-- ENDING CREDITS -->
+      <div class="ending__credits">
+        <h3 class="credits"></h3>
+        <button class="btn__retry btn">Play again?</button>
+      </div>
+      <!-- ENDING CREDITS -->
+    </div>
+    <!-- MESSAGE DISPLAY -->
+    <div class="message__display">
+      <!-- Your answer was not correct,Correct answer was Obi-Wan Kenobi -->
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
