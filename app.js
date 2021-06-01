@@ -69,8 +69,10 @@ class Quiz {
         }, playtime + 700);
         setTimeout(() => {
             this.updateImage();
-            wrapper.classList.add('show__game');
-        }, playtime + 1000);
+          img.addEventListener('load',function(){
+           wrapper.classList.add('show__game');
+        })
+        }, playtime + 1200);
     }
 
     processPlayersInput(e) {
@@ -91,13 +93,13 @@ class Quiz {
             this.renderAnswer('correct');
             setTimeout(() => {
                 this.nextQuestion();
-            }, 2400);
+            }, 2600);
         }
         else {
             this.renderAnswer('wrong');
             setTimeout(() => {
                 this.nextQuestion();
-            }, 2400);
+            }, 2600);
         }
 
         userInput.value = '';
@@ -108,9 +110,9 @@ class Quiz {
         imageContainer.classList.add('unblur');
         if (type === 'correct') {
             this.correctAnswers++;
-            this.alertMsg('Your answer is correct!!', 2400, 'correct');
+            this.alertMsg('Your answer is correct!!', 2600, 'correct');
         } else if (type === 'wrong') {
-            this.alertMsg(`Your answer is incorrect,correct answer was ${this.answers[this.imageNumber]}.`, 2400, 'wrong');
+            this.alertMsg(`Your answer is incorrect,correct answer was ${this.answers[this.imageNumber]}.`, 2600, 'wrong');
             this.wrongAnswers++;
         }
     };
@@ -118,9 +120,6 @@ class Quiz {
     updateImage() {
         let randomNumber = this.questionsArray.pop();
         img.src = `answers/${randomNumber}.jpg`;
-        setTimeout(() => {
-            imageContainer.classList.remove('fade-in');
-        }, 1500);
         submitBtn.disabled = false;
     }
 
@@ -128,11 +127,13 @@ class Quiz {
         if (this.questionsArray.length === 0) {
             this.gameOver();
         } else {
-            imageContainer.classList.add('fade-in');
+          this.updateImage();
+          imageContainer.classList.remove('fade-in');
+           img.addEventListener('load',function(){
+           imageContainer.classList.add('fade-in');
             imageContainer.classList.remove('unblur');
             submitBtn.disabled = false;
-            this.updateImage();
-        }
+        })}
     }
 
     gameOver() {
