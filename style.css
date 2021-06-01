@@ -28,7 +28,7 @@ html {
 
 @media (max-width: 450px) {
   html {
-    font-size: 40%;
+    font-size: 50%;
   }
 }
 
@@ -82,7 +82,8 @@ body {
 
 @media (max-width: 450px) {
   .wrapper h1 {
-    font-size: 5rem;
+    top: 3rem;
+    font-size: 4rem;
   }
 }
 
@@ -94,13 +95,20 @@ body {
           justify-content: space-between;
 }
 
+@media (max-width: 450px) {
+  .wrapper .start__box {
+    height: 43rem;
+    margin: 0;
+  }
+}
+
 .wrapper .start__box h2 {
   font-size: 5rem;
 }
 
 @media (max-width: 450px) {
   .wrapper .start__box h2 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
@@ -191,6 +199,14 @@ body {
           filter: blur(1rem);
 }
 
+@media (max-width: 450px) {
+  .wrapper .game__box .img__container {
+    height: 50rem;
+    max-width: 42rem;
+    margin: -13rem 0 3rem;
+  }
+}
+
 .wrapper .game__box form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,13 +248,13 @@ body {
 }
 
 .wrapper .game__box .fade-in {
-  -webkit-animation: fade__in 1s;
-          animation: fade__in 1s;
+  -webkit-animation: fade__in 2s;
+          animation: fade__in 2s;
 }
 
 .wrapper .game__box .unblur img {
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
   -webkit-filter: blur(0) !important;
           filter: blur(0) !important;
 }
@@ -376,21 +392,23 @@ body {
 
 @media (max-width: 450px) {
   .message__display {
+    padding: 0 1rem 3.5rem; 
     font-size: 2rem;
-    padding: 0 4rem;
   }
 }
 
 .correct {
   color: #ffffff;
   background: transparent;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18, 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+ 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
 }
 
 .wrong {
   color: #ffffff;
   background: transparent;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 55px red, 0 0 75px red;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px red,
+ 0 0 30px red, 0 0 40px red, 0 0 55px red, 0 0 75px red;
 }
 
 .saber__ignite .lightsaber::before {
