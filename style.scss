@@ -44,7 +44,7 @@ html {
     font-size: 50%;
   }
   @include mobile() {
-    font-size: 40%;
+    font-size: 50%;
   }
 }
 
@@ -76,7 +76,8 @@ body {
     position: absolute;
     top: 8rem;
     @include mobile() {
-      font-size: 5rem;
+      top: 3rem;
+      font-size: 4rem;
     }
   }
   //   START BOX
@@ -84,10 +85,14 @@ body {
     height: 50rem;
     margin-top: 5rem;
     justify-content: space-between;
+    @include mobile() {
+      height: 43rem;
+      margin: 0;
+    }
     h2 {
       font-size: 5rem;
       @include mobile() {
-        font-size: 4rem;
+        font-size: 3rem;
       }
     }
     .btn__container {
@@ -152,6 +157,11 @@ body {
         object-fit: cover;
         filter: blur(1rem);
       }
+      @include mobile() {
+        height: 50rem;
+        max-width: 42rem;
+        margin: -13rem 0 3rem;
+      }
     }
     form {
       @include center-items();
@@ -178,11 +188,11 @@ body {
     }
 
     .fade-in {
-      animation: fade__in 1s;
+      animation: fade__in 2s;
     }
     .unblur {
       img {
-        transition: 0.8s;
+        transition: 1.5s;
         filter: blur(0) !important;
       }
     }
@@ -279,8 +289,8 @@ body {
   justify-content: center;
   text-align: center;
   @include mobile() {
+    padding: 0 1rem 3.5rem;
     font-size: 2rem;
-    padding: 0 4rem;
   }
 }
 
